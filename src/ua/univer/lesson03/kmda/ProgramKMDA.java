@@ -7,13 +7,19 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ProgramKMDA {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
 
       //  List<User> userList = UserController.getUserListFromCSV(filename);
-        List<User> userList = UserController.getUserListFromURL(UserPath.URL_KMDA_LIPEN);
-        System.out.println(userList);
-        List<User> maxSalaryUsers = UserService.getMaxSalaryUsers(userList);
-        System.out.println(maxSalaryUsers);
+      //  List<User> userList = UserController.getUserListFromURL(UserPath.URL_KMDA_LIPEN);
+     //   System.out.println(userList);
+     //   List<User> maxSalaryUsers = UserService.getMaxSalaryUsers(userList);
+     //   System.out.println(maxSalaryUsers);
+
+     //   writeUserToBIN(maxSalaryUsers);
+        List<User> usersFromFile = UserController.getUsersFromBINFile("users.bin");
+
+
+        System.out.println(usersFromFile);
     }
 
 
