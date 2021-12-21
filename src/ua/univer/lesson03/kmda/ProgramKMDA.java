@@ -8,8 +8,9 @@ import java.util.List;
 
 public class ProgramKMDA {
     public static void main(String[] args) throws IOException {
-        String filename ="resources"+ File.separator+"lipen-2019.csv";
-        List<User> userList = UserController.getUserListFromCSV(filename);
+
+      //  List<User> userList = UserController.getUserListFromCSV(filename);
+        List<User> userList = UserController.getUserListFromURL(UserPath.URL_KMDA_LIPEN);
         System.out.println(userList);
         List<User> maxSalaryUsers = UserService.getMaxSalaryUsers(userList);
         System.out.println(maxSalaryUsers);
