@@ -24,7 +24,8 @@ public class ProgramSort {
 
         List<String> usersName = users.stream()
                 .filter(Objects::nonNull)
-                .map(User::getName)
+                .map(user -> user.getName()+", "+user.getPosition())
+
                 .collect(Collectors.toList());
 
         System.out.println(usersName);
